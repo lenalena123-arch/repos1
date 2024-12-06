@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище user226_dbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="roleK">
+    <Key>
+      <PropertyRef Name="id_role" />
+    </Key>
+    <Property Name="id_role" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nazvanie" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="userK">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imya" Type="varchar" MaxLength="50" />
+    <Property Name="familia" Type="varchar" MaxLength="50" />
+    <Property Name="login" Type="varchar" MaxLength="50" />
+    <Property Name="parol" Type="varchar" MaxLength="50" />
+    <Property Name="id_role" Type="int" />
+  </EntityType>
+  <Association Name="FK_userK_roleK">
+    <End Role="roleK" Type="Self.roleK" Multiplicity="0..1" />
+    <End Role="userK" Type="Self.userK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roleK">
+        <PropertyRef Name="id_role" />
+      </Principal>
+      <Dependent Role="userK">
+        <PropertyRef Name="id_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище user226_dbModelContainer">
+    <EntitySet Name="roleK" EntityType="Self.roleK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userK" EntityType="Self.userK" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_userK_roleK" Association="Self.FK_userK_roleK">
+      <End Role="roleK" EntitySet="roleK" />
+      <End Role="userK" EntitySet="userK" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

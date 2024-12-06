@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище user226_dbModelContainer" CdmEntityContainer="user226_dbEntities1">
+    <EntitySetMapping Name="roleK">
+      <EntityTypeMapping TypeName="user226_dbModel.roleK">
+        <MappingFragment StoreEntitySet="roleK">
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+          <ScalarProperty Name="nazvanie" ColumnName="nazvanie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userK">
+      <EntityTypeMapping TypeName="user226_dbModel.userK">
+        <MappingFragment StoreEntitySet="userK">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="imya" ColumnName="imya" />
+          <ScalarProperty Name="familia" ColumnName="familia" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="parol" ColumnName="parol" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="api2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:api2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="262" Width="716">
+    <Grid HorizontalAlignment="Center" Width="716" Height="252" VerticalAlignment="Top">
+        <Button x:Name="GetFullName" Content="Получить данные" HorizontalAlignment="Left" Margin="71,37,0,0" VerticalAlignment="Top" Height="60" Width="265" Background="White" BorderBrush="#FF8800FF" FontSize="20" Click="GetFullName_Click"/>
+        <Button x:Name="SendTestResult" Content="Отправить результат теста" HorizontalAlignment="Left" Margin="71,120,0,0" VerticalAlignment="Top" Height="60" Width="265" Background="White" BorderBrush="Black" FontSize="20" Click="SendTestResult_Click"/>
+        <TextBlock x:Name="TextBoxFullName" HorizontalAlignment="Left" Margin="368,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="60" Width="267" FontSize="14" Foreground="Black" Background="LightYellow" />
+        <TextBlock HorizontalAlignment="Left" Margin="368,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="60" Width="267" Background="AliceBlue"/>
+        <TextBlock x:Name="tb_result" HorizontalAlignment="Left" Margin="132,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="142" Background="AntiqueWhite"/>
+    </Grid>
+</Window>

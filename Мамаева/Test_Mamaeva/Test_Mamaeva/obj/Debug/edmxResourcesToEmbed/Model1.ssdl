@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="user257_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ATRUsers">
+    <Key>
+      <PropertyRef Name="id_users" />
+    </Key>
+    <Property Name="id_users" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="id_role" Type="int" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KURS_Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="role" Type="int" />
+    <Property Name="login" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="user257_dbModelStoreContainer">
+    <EntitySet Name="ATRUsers" EntityType="Self.ATRUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KURS_Users" EntityType="Self.KURS_Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
