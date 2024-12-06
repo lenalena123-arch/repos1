@@ -1,0 +1,16 @@
+﻿<Window x:Class="API_DEMO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:API_DEMO"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="190" Width="400">
+    <Grid>
+        <Button Name="GetFullName" Click="GetFullName_Click" Content="Получить данные" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="42" Width="161" Background="White" FontFamily="Book Antiqua"/>
+        <Button Content="Отправить результат теста" Name="SendTestResult" Click="SendTestResult_Click" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Height="41" Width="161" Background="White" FontFamily="Book Antiqua"/>
+        <TextBlock Name="TextBoxFullName" Text="ФИО" HorizontalAlignment="Left" Margin="177,37,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="42" Width="213" FontFamily="Book Antiqua"/>
+        <TextBlock Name="TextBoxResult" Text="Результат" HorizontalAlignment="Left" Margin="177,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="41" Width="213" FontFamily="Book Antiqua"/>
+
+    </Grid>
+</Window>
